@@ -19,21 +19,21 @@ export const LandingPage = () => {
               className="text-[#9999B5] hover:text-white transition-colors font-medium py-3 text-lg sm:text-xl flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <ArrowRight className="mr-3 w-4 h-4 sm:w-5 sm:h-5" /> Home
+              <ArrowRight className="mr-3 w-4 h-4 sm:w-5 sm:h-5" /> HOME
             </a>
             <a 
               href="/about" 
               className="text-[#9999B5] hover:text-white transition-colors font-medium py-3 text-lg sm:text-xl flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <ArrowRight className="mr-3 w-4 h-4 sm:w-5 sm:h-5" /> About
+              <ArrowRight className="mr-3 w-4 h-4 sm:w-5 sm:h-5" /> ABOUT RGM
             </a>
             <a 
               href="#contact" 
               className="text-[#9999B5] hover:text-white transition-colors font-medium py-3 text-lg sm:text-xl flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <ArrowRight className="mr-3 w-4 h-4 sm:w-5 sm:h-5" /> Contact
+              <ArrowRight className="mr-3 w-4 h-4 sm:w-5 sm:h-5" /> CONNECT WITH US
             </a>
           </div>
         </div>
@@ -85,13 +85,21 @@ export const LandingPage = () => {
   </h1>
 
   <p className="text-sm sm:text-2xl md:text-2xl max-w-3xl leading-relaxed text-[#CCCCEE]">
-    Unlock the life God created uniquely for you. Grow in Faith, Find Guidance. Stay Connected
+    Rohi is a young and vibrant ministry. United by one passion, we nurture, support, and inspire one another as we pursue our divine destinies.
   </p>
 
   <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
     <button className="bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-800 hover:to-purple-600 px-10 py-4 rounded-xl text-xl sm:text-2xl font-bold text-white shadow-lg shadow-purple-700/50 transition-transform duration-300 transform hover:scale-105 flex items-center gap-3">
       <Play className="w-5 h-5 sm:w-6 sm:h-6" />
       journey here
+    </button>
+
+     <button className="bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-800 hover:to-purple-600 px-10 py-4 rounded-xl text-xl sm:text-2xl font-bold text-white shadow-lg shadow-purple-700/50 transition-transform duration-300 transform hover:scale-105 flex items-center gap-3">
+      About RGM
+    </button>
+
+     <button className="bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-800 hover:to-purple-600 px-10 py-4 rounded-xl text-xl sm:text-2xl font-bold text-white shadow-lg shadow-purple-700/50 transition-transform duration-300 transform hover:scale-105 flex items-center gap-3">
+      Connect With Us
     </button>
   </div>
 </div>
