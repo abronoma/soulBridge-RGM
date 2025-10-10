@@ -129,7 +129,7 @@ const VideoModal = ({ show, onClose }) => {
     <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
       <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl max-w-[90vw] max-h-[90vh]">
         <iframe
-          src="https://www.youtube.com/embed/1CU78qEzAv0?autoplay=1&rel=0"
+          src="https://www.youtube.com/embed/zBE9atXSF_U?autoplay=1&rel=0"
           title="Win Souls Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
