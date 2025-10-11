@@ -126,19 +126,34 @@ const VideoModal = ({ show, onClose }) => {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-      <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl max-w-[90vw] max-h-[90vh]">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+      onClick={onClose}
+    >
+      <div
+        className="relative rounded-2xl shadow-2xl flex justify-center items-center"
+        style={{
+          background: "transparent",
+          maxWidth: "95vw",
+          maxHeight: "90vh",
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
         <iframe
-          src="https://www.youtube.com/embed/zBE9atXSF_U?autoplay=1&rel=0"
-          title="Win Souls Video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          src="https://www.youtube.com/embed/y1w7Zp-diDE?autoplay=1&rel=0&controls=1&modestbranding=1"
+          title="Rohi Global Ministries Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
           allowFullScreen
-          className="w-[80vw] h-[45vw] max-w-[900px] max-h-[506px] rounded-2xl"
+          className="rounded-2xl w-[90vw] h-[60vw] max-w-[1280px] max-h-[720px]"
+          style={{
+            border: "none",
+            display: "block",
+          }}
         ></iframe>
-
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 bg-[#9b2cff] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-xl hover:bg-[#7b23cc] transition"
+          className="absolute top-4 right-4 bg-[#9b2cff] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-2xl hover:bg-[#7b23cc] transition-transform hover:scale-110"
+          style={{ zIndex: 100 }}
         >
           ×
         </button>
@@ -146,6 +161,8 @@ const VideoModal = ({ show, onClose }) => {
     </div>
   );
 };
+
+
 
 
 
