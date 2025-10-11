@@ -18,7 +18,7 @@ const CTA_BUTTONS = [
     href: null,
   },
   {
-    label: "About Rohi",
+    label: "About RGM",
     icon: null,
     variant: "outline",
     href: "/about",

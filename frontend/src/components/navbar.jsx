@@ -73,7 +73,7 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(false)}
             className="text-white text-base sm:text-lg font-semibold px-1 py-5 rounded-full bg-[#9b2cff] hover:bg-[#a84aff] hover:scale-105 transition-all w-2/3 text-center"
           >
-            About Rohi
+            About RGM
           </a>
 
           {/* Contact Button */}
