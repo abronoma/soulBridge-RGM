@@ -1,6 +1,5 @@
-// File: src/components/Navbar.jsx
 import React, { useState } from "react";
-import { Heart, Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -8,77 +7,73 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center px-4 sm:px-6 py-5 fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
-       <a href="/" className="flex items-center gap-3">
-  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
-    <img
-      src="/logo.jpg"
-      alt="RGM"
-      className="w-8 h-8 object-contain"
-    />
-  </div>
-  {/* <span className="font-bold text-white tracking-tight text-lg">
-    Rohi Global Ministries
-  </span> */}
-</a>
+      {/* Top Navigation Bar */}
+      <nav className="flex justify-between items-center px-4 sm:px-6 py-5 fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-transparent border-b border-white/10">
+        {/* Logo */}
+        <a href="/" className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
+            <img
+              src="/logo.jpg"
+              alt="RGM"
+              className="w-8 h-8 object-contain"
+            />
+          </div>
+        </a>
 
-
-        {/* Desktop Nav */}
+        {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-6 lg:space-x-8">
           <a
             href="/"
-            className="text-white hover:text-white font-xl transition-colors"
+            className="text-white hover:text-[#ffb6f9] font-medium text-lg transition-colors"
           >
             Home
           </a>
           <a
             href="/about"
-            className="text-white hover:text-white font-bold transition-colors"
+            className="text-white hover:text-[#ffb6f9] font-bold text-lg transition-colors"
           >
             About
           </a>
           <button
             onClick={() => setFormOpen(true)}
-            className="text-white hover:text-white font-xl transition-colors"
+            className="text-white hover:text-[#ffb6f9] font-medium text-lg transition-colors"
           >
             Contact
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Hamburger Icon */}
         <button
-          className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
+          className="md:hidden text-white p-2 rounded-lg bg-[#7b23cc]/80 hover:bg-[#9b2cff] transition-all"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <div
-        className={`fixed top-0 right-0 w-full h-full bg-black/95 backdrop-blur-lg z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 w-full h-full bg-[#7b23cc]/30 backdrop-blur-sm z-40 transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         } md:hidden`}
       >
-        <div className="flex flex-col p-6 sm:p-8 space-y-6 sm:space-y-8 mt-16 sm:mt-20 items-center">
+        <div className="flex flex-col p-6 sm:p-8 space-y-5 mt-20 items-center">
           {/* Home Button */}
           <a
             href="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="bg-[#1d0022] text-white text-xl sm:text-2xl font-bold px-8 py-4 rounded-2xl shadow-lg hover:scale-105 transition-transform flex items-center gap-3 w-3/4 justify-center"
+            className="text-white text-base sm:text-lg font-semibold px-1 py-5 rounded-full bg-[#9b2cff] hover:bg-[#a84aff] hover:scale-105 transition-all w-2/3 text-center"
           >
-            <ArrowRight className="w-5 h-5" />
-            HOME
+           Home
           </a>
 
           {/* About Button */}
           <a
             href="/about"
             onClick={() => setMobileMenuOpen(false)}
-            className="bg-[#1d0022] text-white text-xl sm:text-2xl font-bold px-8 py-4 rounded-2xl shadow-lg hover:scale-105 transition-transform flex items-center gap-3 w-3/4 justify-center"
+            className="text-white text-base sm:text-lg font-semibold px-1 py-5 rounded-full bg-[#9b2cff] hover:bg-[#a84aff] hover:scale-105 transition-all w-2/3 text-center"
           >
-            <ArrowRight className="w-5 h-5" />
-            ABOUT RGM
+            About Rohi
           </a>
 
           {/* Contact Button */}
@@ -88,10 +83,9 @@ const Navbar = () => {
               setMobileMenuOpen(false);
               setFormOpen(true);
             }}
-            className="bg-[#1d0022] text-white text-xl sm:text-2xl font-bold px-8 py-4 rounded-2xl shadow-lg hover:scale-105 transition-transform flex items-center gap-3 w-3/4 justify-center"
+            className="text-white text-base sm:text-lg font-semibold px-1 py-5 rounded-full bg-[#9b2cff] hover:bg-[#a84aff] hover:scale-105 transition-all w-2/3 text-center"
           >
-            <ArrowRight className="w-5 h-5" />
-            CONNECT
+            Connect With Us
           </a>
         </div>
       </div>

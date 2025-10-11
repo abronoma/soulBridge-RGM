@@ -251,13 +251,17 @@ const toggleDept = (idx) => {
           whileHover={{ scale: 1.05 }}
           className="flex justify-center mt-12"
         >
-          <button
-            onClick={() => (window.location.href = "/contact")}
-            className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-purple-700 hover:shadow-purple-500/50 transition-all duration-300 text-sm sm:text-base flex items-center gap-2"
+          {/* Contact Button */}
+          <a
+            href="/contact"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              setFormOpen(true);
+            }}
+            className="text-white text-base sm:text-lg font-semibold px-1 py-5 rounded-full bg-[#9b2cff] hover:bg-[#a84aff] hover:scale-105 transition-all w-2/3 text-center"
           >
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-            CONNECT WITH US
-          </button>
+            Connect With Us
+          </a>
         </motion.div>
       </main>
 

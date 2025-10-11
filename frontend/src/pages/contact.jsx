@@ -59,48 +59,48 @@ export default function ConnectWithUs() {
           </h1>
 
           {/* Dropdown Button */}
-          <div className="relative inline-block text-left">
-          <button
-  onClick={() => setDropdownOpen(!dropdownOpen)}
-  className="bg-[#1d0022] backdrop-blur-md border border-white/20 px-8 py-4 rounded-2xl text-xl sm:text-2xl font-semibold shadow-lg hover:scale-105 hover:bg-[#2a0033] transition-transform flex items-center gap-3"
->
-  Connect With Us
-  <ChevronDown
-    className={`w-5 h-5 transition-transform ${
-      dropdownOpen ? "rotate-180" : ""
-    }`}
-  />
-</button>
+<div className="relative inline-block text-left w-full sm:w-2/3">
+  <button
+    onClick={() => setDropdownOpen(!dropdownOpen)}
+    className="text-white text-base sm:text-lg font-semibold px-1 py-5 rounded-full bg-[#9b2cff] hover:bg-[#a84aff] hover:scale-105 transition-all w-full text-center flex items-center justify-center gap-2"
+  >
+    Connect With Us
+    <ChevronDown
+      className={`w-5 h-5 transition-transform ${
+        dropdownOpen ? "rotate-180" : ""
+      }`}
+    />
+  </button>
 
+  {/* Dropdown Menu */}
+  {dropdownOpen && (
+    <div className="absolute mt-3 w-full sm:w-56 bg-white text-gray-900 rounded-xl shadow-xl border border-gray-200 overflow-hidden z-50">
+      <button
+        onClick={() => {
+          setFormType("member");
+          setModalOpen(true);
+          setDropdownOpen(false);
+        }}
+        className="flex items-center gap-3 px-5 py-3 hover:bg-gray-100 w-full text-left"
+      >
+        <UserPlus className="w-5 h-5 text-purple-600" />
+        Core Member
+      </button>
+      <button
+        onClick={() => {
+          setFormType("affiliate");
+          setModalOpen(true);
+          setDropdownOpen(false);
+        }}
+        className="flex items-center gap-3 px-5 py-3 hover:bg-gray-100 w-full text-left"
+      >
+        <Users className="w-5 h-5 text-purple-600" />
+        Affiliate Member
+      </button>
+    </div>
+  )}
+</div>
 
-            {/* Dropdown Menu */}
-            {dropdownOpen && (
-              <div className="absolute mt-3 w-56 bg-white text-gray-900 rounded-xl shadow-xl border border-gray-200 overflow-hidden z-50">
-                <button
-                  onClick={() => {
-                    setFormType("member");
-                    setModalOpen(true);
-                    setDropdownOpen(false);
-                  }}
-                  className="flex items-center gap-3 px-5 py-3 hover:bg-gray-100 w-full text-left"
-                >
-                  <UserPlus className="w-5 h-5 text-purple-600" />
-                  Core Member
-                </button>
-                <button
-                  onClick={() => {
-                    setFormType("affiliate");
-                    setModalOpen(true);
-                    setDropdownOpen(false);
-                  }}
-                  className="flex items-center gap-3 px-5 py-3 hover:bg-gray-100 w-full text-left"
-                >
-                  <Users className="w-5 h-5 text-purple-600" />
-                  Affiliate Member
-                </button>
-              </div>
-            )}
-          </div>
         </div>
 
         {/* Modal */}
